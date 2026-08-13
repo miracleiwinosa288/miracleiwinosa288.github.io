@@ -216,57 +216,90 @@ nav{
     align-items: center;
 }
 .endbox{
-    /* overflow: hidden; */
+    overflow: hidden;
     position: relative;
     justify-self: end;
     display: flex;
-    /* background-color: rgba(0, 0, 0, 0.2); */
-    width: 500px;
-    height: 500px;
+    background-color: rgba(0, 0, 0, 0.2);
+    width: 400px;
+    height: 400px;
+    animation: spinFloat 20s ease-in-out infinite;
+    border-radius: 50%;
     .box1{
-        transform: rotate(-25deg);
+        transform: rotate(45deg);
         position: absolute;
-        right: 5%;
-        background-color: rgba(0, 0, 0, 0.2);
-        width: 200px;
-        height: 200px;
+        top: 20%;
+        right: 40%;
+        left: 35%;
     }
     .box2{
-        transform: rotate(-25deg);
+        transform: rotate(45deg);
         position: absolute;
-        bottom: 5%;
-        right: 0%;
-        background-color: rgba(0, 0, 0, 0.2);
-        width: 200px;
-        height: 200px;
+        bottom: 30%;
+        right: 10%;
+        
     }
     .box3{
-        transform: rotate(-25deg);
+        transform: rotate(45deg);
         position: absolute;
-        top: 30%;
+        bottom: 30%;
         left: 10%;
-        background-color: rgba(0, 0, 0, 0.2);
-        width: 200px;
-        height: 200px;
+        
+    }
+    .box4{
+        transform: rotate(45deg);
+        position: absolute;
+        bottom: 10%;
+        right: 40%;
+        left: 38%;
     }
     .box{
+        background-color: #ffffff;
         backdrop-filter: blur(10px);
-        border: 2px solid rgba(124, 58, 237, 0.3);
+        /* border: 2px solid rgba(124, 58, 237, 0.3); */
         border-radius: 20px;
-        transform: rotate(45deg);
-        transition: 0.4s;
-        animation: float 4s ease-in-out infinite;
+        width: 100px;
+        height: 100px;
+        animation: boxSpin 20s ease-in-out infinite;
+        
     }
 
     .box:hover{
-        transform: rotate(45deg) scale(1.15);
+        transform: scale(1.15);
         background: rgba(236, 72, 153, 0.3);
     }
 }
-@keyframes float{
-        0%, 100% {
-            transform: rotate(45deg) translateY(0px);
+@keyframes boxSpin{
+    0%{
+            transform: rotate(-45deg);
         }
-        50%{transform: rotate(45deg) translateY(-15px)}
-    }
+        25%{transform: rotate(-90deg);
+        }
+        50% {
+            transform: rotate(-180deg);
+        }
+        75%{
+            transform: rotate(-270deg);
+        }
+        100%{
+            transform: rotate(-360deg);
+        }
 
+}
+@keyframes spinFloat{
+        0%{
+            transform: rotate(45deg);
+        }
+        25%{transform: rotate(90deg);
+        }
+        50% {
+            transform: rotate(180deg);
+        }
+        75%{
+            transform: rotate(270deg);
+        }
+        100%{
+            transform: rotate(360deg);
+        }
+
+}
