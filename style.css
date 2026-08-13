@@ -169,11 +169,13 @@ nav{
     height: 200px;
 }
 .intro{
+    margin-top: 20px;
     height: 250px;
-    width: 300px;
-    box-shadow: 12px 12px 12px 12px rgba(0, 0, 0, 0.2);
-    background: rgba(0, 0, 0, 0.1);
+    width: 50%;
+    box-shadow: 3px 2px 12px 3px rgba(0, 0, 0, 0.2);
+    /* background: rgba(0, 0, 0, 0.1); */
     backdrop-filter: blur(5px);
+    padding: 12px 20px;
     .title{
         color:crimson;
         font-size: large;
@@ -182,10 +184,32 @@ nav{
     }
     .para{
         font-weight: bold;
+        text-align: left;
     }
     #btns{
-        margin-top: 40px;
-        /* position: absolute; */
+        margin-top: 30px;
     }
+    .dot{
+        position: absolute;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 4px;
+    }
+    .dot1, .dot2, .dot3{
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
 }
+.dot1{
+    background-color: red;
+}
+.dot2{
+    background-color: green;
+}
+.dot3{
+    background-color: blue;
+}
+}
+
 
