@@ -17,3 +17,10 @@ document.addEventListener('DOMContentLoaded', function () {
         }
     });
 });
+
+document.addEventListener('DOMContentLoaded', function(){
+    document.querySelector('.btn').onclick = function(){
+        document.querySelector('.arrow').style.translateX ='50px'
+    };
+}
+)
