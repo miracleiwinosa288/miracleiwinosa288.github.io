@@ -96,8 +96,8 @@ nav{
 }
 .btn{
     position: absolute;
-    top: 50%;
-    left: 50%;
+    top: 30%;
+    left: 30%;
     
 }
 #btn{
@@ -207,5 +207,66 @@ nav{
     background-color: blue;
 }
 }
+.copyright{
+    border-top: 2px solid;
+    margin-top: 2rem;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+}
+.endbox{
+    /* overflow: hidden; */
+    position: relative;
+    justify-self: end;
+    display: flex;
+    /* background-color: rgba(0, 0, 0, 0.2); */
+    width: 500px;
+    height: 500px;
+    .box1{
+        transform: rotate(-25deg);
+        position: absolute;
+        right: 5%;
+        background-color: rgba(0, 0, 0, 0.2);
+        width: 200px;
+        height: 200px;
+    }
+    .box2{
+        transform: rotate(-25deg);
+        position: absolute;
+        bottom: 5%;
+        right: 0%;
+        background-color: rgba(0, 0, 0, 0.2);
+        width: 200px;
+        height: 200px;
+    }
+    .box3{
+        transform: rotate(-25deg);
+        position: absolute;
+        top: 30%;
+        left: 10%;
+        background-color: rgba(0, 0, 0, 0.2);
+        width: 200px;
+        height: 200px;
+    }
+    .box{
+        backdrop-filter: blur(10px);
+        border: 2px solid rgba(124, 58, 237, 0.3);
+        border-radius: 20px;
+        transform: rotate(45deg);
+        transition: 0.4s;
+        animation: float 4s ease-in-out infinite;
+    }
 
+    .box:hover{
+        transform: rotate(45deg) scale(1.15);
+        background: rgba(236, 72, 153, 0.3);
+    }
+}
+@keyframes float{
+        0%, 100% {
+            transform: rotate(45deg) translateY(0px);
+        }
+        50%{transform: rotate(45deg) translateY(-15px)}
+    }
 
